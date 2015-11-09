@@ -1,0 +1,7 @@
+"Alex, open taxi"
+
+"Where would you like a cab to?"
+
+"Get me a cab to Union Square"
+
+"Get me a cab to number 45 on West 48th Street in New York City"

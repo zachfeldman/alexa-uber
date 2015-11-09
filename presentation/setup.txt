@@ -1,0 +1,12 @@
+Instructions for demo:
+- Start OpenVPN
+- Connect to static.tunnelservers.net from menu at the top of the screen
+- `cd ~/dev/alexa-uber && be ruby main.rb` 
+- Say, "Alexa, open uber"
+- Say, "get me a cab to the liberty bell"
+- Say, "yes"
+
+Tabs:
+- Lambda: https://console.aws.amazon.com/lambda/home?region=us-east-1#
+- Alexa Skills Kit/Developer Console: https://developer.amazon.com/edw/home.html#/skills/list , "Get an Uber" app
+

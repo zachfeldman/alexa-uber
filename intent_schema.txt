@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "HouseNumber",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "StreetName",
+          "type": "STREET"
+        },
+        {
+          "name": "City",
+          "type": "AMAZON.US_CITY"
+        },
+        {
+          "name": "Landmark",
+          "type": "LANDMARK"
+        }
+      ],
+      "intent": "GetAddressIntent"
+    },
+    {
+      "slots":[
+         {
+           "name": "Confirmation",
+           "type": "BOOLEAN"
+         }
+      ],
+      "intent": "GetConfirmationIntent"
+    }
+  ]
+}

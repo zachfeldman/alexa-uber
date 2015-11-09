@@ -1,6 +1,22 @@
+GIT
+  remote: git://github.com/zachfeldman/uber_api.git
+  revision: a4930c7b561ec4feb4c2df53bea65952ea327e29
+  specs:
+    uber_api (0.1.2)
+      faraday
+      faraday_middleware
+      json
+
 GEM
   remote: https://rubygems.org/
   specs:
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.10.0)
+      faraday (>= 0.7.4, < 0.10)
+    geocoder (1.2.11)
+    json (1.8.3)
+    multipart-post (2.0.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -14,7 +30,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  geocoder
   sinatra
+  uber_api!
 
 BUNDLED WITH
    1.10.6

@@ -1,0 +1,3 @@
+GetAddressIntent get me a cab to {Landmark}
+GetAddressIntent get me a cab to number {HouseNumber} on {StreetName} in {City}
+GetConfirmationIntent {Confirmation}
