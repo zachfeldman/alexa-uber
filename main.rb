@@ -24,7 +24,7 @@ get '/' do
   "Hello world"
 end
 
-post "/command" do
+post "/" do
 
   alexa_request = JSON.parse(request.body.read)
   start_alexa_session(alexa_request)
