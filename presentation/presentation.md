@@ -6,6 +6,20 @@ slidenumbers: true
 
 ![fit inline](ruby-echo.png)
 
+### [fit] Code/Notes: [github.com/zachfeldman/alexa-uber](http://github.com/zachfeldman/alexa-uber)
+
+---
+
+# `$ whoami`
+
+@zachfeldman
+Co-Founder/Chief Academic Officer
+New York Code + Design Academy
+in Philadelphia!
+nycda.com
+
+Classes on web development that meet either for 3 months during the day or 4 months twice a week at night - right here at the Hub! And in NYC, Syracuse, and Amsterdam.
+
 ---
 
 #[fit] The Amazon Echo

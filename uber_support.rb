@@ -9,6 +9,9 @@ def get_uber(location_1, location_2)
     :sandbox => !REAL_RIDE
   )
 
+  puts location_1[:lat].to_f.to_s
+  puts location_1[:lon].to_f.to_s
+
   # Default to UberX
   product_choices = client.products(location_1[:lat].to_f, location_1[:lon].to_f)
   product_id = product_choices[2]["product_id"]

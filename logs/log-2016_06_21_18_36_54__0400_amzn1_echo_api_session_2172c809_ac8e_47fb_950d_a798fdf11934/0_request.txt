@@ -1,0 +1,21 @@
+Request Origin: Alexa/Amazon
+
+{
+  "version": "1.0",
+  "session": {
+    "new": true,
+    "sessionId": "amzn1.echo-api.session.2172c809-ac8e-47fb-950d-a798fdf11934",
+    "application": {
+      "applicationId": "amzn1.echo-sdk-ams.app.8372f008-8601-4e31-bf46-d4369956d0f6"
+    },
+    "user": {
+      "userId": "amzn1.account.AGXS7HC5IQMGBEEDFAAJK3PMNBRQ"
+    }
+  },
+  "request": {
+    "type": "LaunchRequest",
+    "requestId": "amzn1.echo-api.request.f7647571-8995-4572-8dbb-f39c2403aefb",
+    "timestamp": "2016-06-21T22:36:36Z",
+    "locale": "en-US"
+  }
+}

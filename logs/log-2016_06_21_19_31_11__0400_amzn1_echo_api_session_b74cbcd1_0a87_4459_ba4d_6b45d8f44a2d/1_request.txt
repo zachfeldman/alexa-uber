@@ -1,0 +1,40 @@
+Request Origin: Alexa/Amazon
+
+{
+  "version": "1.0",
+  "session": {
+    "new": false,
+    "sessionId": "amzn1.echo-api.session.b74cbcd1-0a87-4459-ba4d-6b45d8f44a2d",
+    "application": {
+      "applicationId": "amzn1.echo-sdk-ams.app.8372f008-8601-4e31-bf46-d4369956d0f6"
+    },
+    "attributes": null,
+    "user": {
+      "userId": "amzn1.account.AGXS7HC5IQMGBEEDFAAJK3PMNBRQ"
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "amzn1.echo-api.request.d8fda017-c4e8-4583-98c6-ffc6b9b255ba",
+    "timestamp": "2016-06-21T23:30:58Z",
+    "locale": "en-US",
+    "intent": {
+      "name": "GetAddressIntent",
+      "slots": {
+        "StreetName": {
+          "name": "StreetName"
+        },
+        "HouseNumber": {
+          "name": "HouseNumber"
+        },
+        "City": {
+          "name": "City"
+        },
+        "Landmark": {
+          "name": "Landmark",
+          "value": "union square"
+        }
+      }
+    }
+  }
+}

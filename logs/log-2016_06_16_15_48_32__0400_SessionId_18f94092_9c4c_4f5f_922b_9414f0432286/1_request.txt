@@ -1,0 +1,29 @@
+Request Origin: Alexa/Amazon
+
+{
+  "version": "1.0",
+  "session": {
+    "new": false,
+    "sessionId": "SessionId.18f94092-9c4c-4f5f-922b-9414f0432286",
+    "application": {
+      "applicationId": "amzn1.echo-sdk-ams.app.8372f008-8601-4e31-bf46-d4369956d0f6"
+    },
+    "user": {
+      "userId": "amzn1.account.AGXS7HC5IQMGBEEDFAAJK3PMNBRQ"
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.1ce5b91e-5987-4d7a-a215-d02e3e883ad4",
+    "timestamp": "2016-06-16T19:48:31Z",
+    "intent": {
+      "name": "GetConfirmationIntent",
+      "slots": {
+        "Confirmation": {
+          "name": "Confirmation",
+          "value": "yes"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+Request Origin: Sinatra App
+
+{
+  "version": "1.0.0",
+  "response": {
+    "outputSpeech": {
+      "type": "PlainText",
+      "text": "Hailing your cab now. Check the Uber app for arrival information or to cancel your trip."
+    },
+    "card": {
+      "type": "Simple",
+      "title": "Request a cab with Uber",
+      "content": "Philly RB is awesome"
+    },
+    "shouldEndSession": true
+  }
+}

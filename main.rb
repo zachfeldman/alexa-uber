@@ -10,16 +10,36 @@ require './uber_support'
 
 require './alexa_support'
 
+def add_logfile logfile_name, content, request_origin
+  log_content = "Request Origin: #{request_origin}\n\n"
+  log_content += content
+  File.open(logfile_name, 'w'){|c| c << log_content}
+end
+
+def timestamper
+  Time.now.to_s.gsub(/[^\w\.]/, '_')
+end
+
+get '/' do
+  "Hello world"
+end
+
 post "/command" do
+
   alexa_request = JSON.parse(request.body.read)
   start_alexa_session(alexa_request)
   session = get_alexa_session(alexa_request)
 
+  logfile_location = "logs/log-#{session[:started]}_#{session[:id].gsub(/[^\w\.]/, '_').gsub(".", "_")}"
+
+  `mkdir #{logfile_location}` if !File.directory?(logfile_location)
+
+  add_logfile "#{logfile_location}/#{session[:counter]}_request.txt", JSON.pretty_generate(alexa_request), "Alexa/Amazon"
+
   if alexa_request["request"]["type"] == "LaunchRequest"
     response_text = "Where would you like to go?"
     end_session = false
-
-  elsif alexa_request["request"]["intent"]["name"] != "GetConfirmationIntent"
+  elsif alexa_request["request"]["intent"] && alexa_request["request"]["intent"]["name"] != "GetConfirmationIntent"
     landmark = alexa_request["request"]["intent"]["slots"]["Landmark"]["value"]
     
     house_number = alexa_request["request"]["intent"]["slots"]["HouseNumber"]["value"]
@@ -27,7 +47,7 @@ post "/command" do
     city = alexa_request["request"]["intent"]["slots"]["City"]["value"]
 
     if landmark
-      location_request = Geocoder.search("#{landmark}, Philadelphia, PA")
+      location_request = Geocoder.search("#{landmark}, New York, NY")
       if location_request.count != 1
         response_text = "We couldn't find that location. Please try again."
       else
@@ -54,24 +74,29 @@ post "/command" do
     end_session = false
   else
     if alexa_request["request"]["intent"]["slots"]["Confirmation"]["value"] == "yes"
-      p DEFAULT_HOME_LOCATION
       location_1 = Geocoder.search(DEFAULT_HOME_LOCATION)
       get_uber(assemble_location_data(location_1), assemble_location_data(session[:new_trip]))
       session[:new_trip] = nil
       response_text = "Hailing your cab now. Check the Uber app for arrival information or to cancel your trip."
     else
-      response_text = "Ok, I won't get you cab now then."
+      response_text = "Ok, I won't get you a cab now then."
     end
     end_session = true
   end
 
-  response = AlexaResponse.new
-  response.build({
-    say: response_text,
+
+  response_builder = AlexaResponse.new
+  response = response_builder.build({
+    say: "The aliens have arrived",
     card: {
       title: "Request a cab with Uber",
-      content: response_text
+      content: "Philly RB is awesome"
     },
     should_end_session: end_session
   })
+
+  add_logfile "#{logfile_location}/#{session[:counter]}_response.txt", JSON.pretty_generate(JSON.parse(response)), "Sinatra App"
+  session[:counter] += 1
+
+  response
 end

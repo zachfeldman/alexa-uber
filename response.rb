@@ -15,7 +15,6 @@ class AlexaResponse
   def build(options = {})
     {
       version: "1.0.0",
-      sessionAttributes: options[:session_attributes],
       response: {
         outputSpeech: {
           type: "PlainText",

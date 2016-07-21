@@ -1,0 +1,17 @@
+Request Origin: Sinatra App
+
+{
+  "version": "1.0.0",
+  "response": {
+    "outputSpeech": {
+      "type": "PlainText",
+      "text": "The aliens have arrived"
+    },
+    "card": {
+      "type": "Simple",
+      "title": "Request a cab with Uber",
+      "content": "Philly RB is awesome"
+    },
+    "shouldEndSession": true
+  }
+}

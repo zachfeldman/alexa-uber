@@ -1,0 +1,23 @@
+Request Origin: Alexa/Amazon
+
+{
+  "version": "1.0",
+  "session": {
+    "new": false,
+    "sessionId": "amzn1.echo-api.session.456f0d1b-f512-4343-9981-70f29bf5210b",
+    "application": {
+      "applicationId": "amzn1.echo-sdk-ams.app.8372f008-8601-4e31-bf46-d4369956d0f6"
+    },
+    "attributes": null,
+    "user": {
+      "userId": "amzn1.account.AGXS7HC5IQMGBEEDFAAJK3PMNBRQ"
+    }
+  },
+  "request": {
+    "type": "SessionEndedRequest",
+    "requestId": "amzn1.echo-api.request.dd9dea59-f518-426d-b6f9-34dcf28c2900",
+    "timestamp": "2016-06-16T19:17:23Z",
+    "locale": "en-US",
+    "reason": "ERROR"
+  }
+}

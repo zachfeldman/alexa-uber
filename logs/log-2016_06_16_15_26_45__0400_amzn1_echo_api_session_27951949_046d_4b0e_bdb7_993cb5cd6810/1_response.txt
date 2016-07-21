@@ -1,0 +1,17 @@
+Request Origin: Sinatra App
+
+{
+  "version": "1.0.0",
+  "response": {
+    "outputSpeech": {
+      "type": "PlainText",
+      "text": "Just to confirm, you'd like a cab right now to Union Square, New York, NY 10003, USA, correct?"
+    },
+    "card": {
+      "type": "Simple",
+      "title": "Request a cab with Uber",
+      "content": "Philly RB is awesome"
+    },
+    "shouldEndSession": false
+  }
+}

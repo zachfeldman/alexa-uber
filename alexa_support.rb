@@ -3,7 +3,7 @@ ALEXA_SESSIONS = []
 def start_alexa_session(alexa_request)
   current_session = ALEXA_SESSIONS.select{|session| session[:id] == alexa_request["session"]["sessionId"]}.first
   if !current_session
-    new_session = {id: alexa_request["session"]["sessionId"]}
+    new_session = {id: alexa_request["session"]["sessionId"], started: Time.now.to_s.gsub(/[^\w\.]/, '_'), counter: 0}
     ALEXA_SESSIONS.push(new_session)
   end
 end
