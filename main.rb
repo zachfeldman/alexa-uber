@@ -87,7 +87,7 @@ post "/" do
 
   response_builder = AlexaResponse.new
   response = response_builder.build({
-    say: "The aliens have arrived",
+    say: response_text,
     card: {
       title: "Request a cab with Uber",
       content: "Philly RB is awesome"
